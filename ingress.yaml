@@ -1,0 +1,23 @@
+apiVersion: 0.1
+kind: Ingress
+metadata:
+  name: ingress-nginx-php
+spec:
+  rules:
+  - host: localhost
+    http:
+      paths:
+      - backend:
+          serviceName: nginx
+          servicePort: 80
+#should be another host
+  - host: localhost
+    http:
+      paths:
+      - backend:
+          serviceName: php
+          servicePort: 9000
+
+
+
+
