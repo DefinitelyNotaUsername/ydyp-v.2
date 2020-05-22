@@ -1,0 +1,27 @@
+apiVersion: 0.1
+kind: Deployment
+metadata:
+  name: nginx-php-deployment
+  labels:
+    app: nginx
+    app: php
+spec:
+#quantity
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+	app: nginx
+	app: php
+    spec:
+      containers:
+      - name: nginx
+#version!
+	image: nginx
+	ports:
+	- containerPort: 80
+      - name: php
+	image: php:7-fpm
+	ports:
+	- containerPort: 9000
+

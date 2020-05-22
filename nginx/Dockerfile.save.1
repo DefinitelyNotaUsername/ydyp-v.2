@@ -1,0 +1,10 @@
+FROM test
+
+COPY default.conf /etc/nginx/
+
+COPY /home/triangle/ydyp/www/html/hello.dev	 /usr/share/nginx/html
+
+VOLUME /home/triangle/ydyp/www/html/hello.dev
+VOLUME /home/triangle/ydyp/config/nginx
+#VOLUME /usr/share/nginx/html
+#VOLUME /etc/nginx
