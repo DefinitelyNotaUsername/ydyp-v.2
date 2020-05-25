@@ -6,7 +6,7 @@ metadata:
     app: nginx
     app: php
 spec:
-#quantitynr
+#quantity?
   replicas: 2 
   template:
     metadata:
@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-#version!
         image: nginx
         ports:
         - containerPort: 80
