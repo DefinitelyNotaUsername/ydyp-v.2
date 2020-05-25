@@ -1,7 +1,13 @@
-FROM test
+FROM nginx
 
-COPY default.conf /etc/nginx
+COPY /home/triangle/ydyp/nginx/index/html /var/www/
 
-COPY index.html	 /usr/share/nginx/html
+COPY /home/triangle/ydyp/nginx/default.conf /etc/nginx/conf.d/default.conf
 
-#VOLUME /home/triangle/ydyp/nginx
+WORKDIR /var/www
+
+
+#previous ver - more or less the same (tho the structure overall has changed)
+#COPY default.conf /etc/nginx
+#COPY index.html	 /usr/share/nginx/html
+
