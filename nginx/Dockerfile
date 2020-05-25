@@ -1,13 +1,13 @@
 FROM nginx
 
-COPY /home/triangle/ydyp/nginx/index/html /var/www/
+COPY . /var/www/index.html
 
-COPY /home/triangle/ydyp/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY . /etc/nginx/conf.d/
 
-WORKDIR /var/www
+WORKDIR /var/www/
 
-
+#todo: fix . path into an absolute one, now it fails with "can't find this way"
 #previous ver - more or less the same (tho the structure overall has changed)
 #COPY default.conf /etc/nginx
-#COPY index.html	 /usr/share/nginx/html
+#COPY index.html /usr/share/nginx/html
 

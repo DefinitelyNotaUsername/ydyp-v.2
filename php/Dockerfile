@@ -1,6 +1,6 @@
 FROM php:7-fpm
 
-COPY /home/triangle/ydyp/php/index.php /var/www/
+COPY . /var/www/
 
 WORKDIR /var/www/
 

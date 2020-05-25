@@ -2,10 +2,10 @@ version: "3.3"
 
 services:
  nginx:
-#  image: nginx
+  image: testnginx
   build: 
-    dockerfile: /home/triangle/ydyp/nginx/Dockerfile   
-    context: .
+    dockerfile: /home/triangle/ydyp/nginx/Dockerfile
+    context: /home/triangle/ydyp/nginx
   restart: always
   ports:
    - "8080:80"
@@ -19,10 +19,10 @@ services:
    - app-network
 
  php:
-#  image: php:7-fpm
+  image: testphp
   build:
     dockerfile: /home/triangle/ydyp/php/Dockerfile
-    context: .
+    context: /home/triangle/ydyp/php
   container_name: php
   restart: always
   ports:
